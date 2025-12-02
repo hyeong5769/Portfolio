@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIinviewer 포트폴리오</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+    /* 기본 스타일 */
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Noto Sans KR', sans-serif; background:#f4f4f9; color:#333;}
+    a {text-decoration:none;}
+
+    /* 헤더 배너 */
+    header {
+        background: linear-gradient(135deg, #4a90e2, #357abd);
+        color:#fff;
+        text-align:center;
+        padding:80px 20px;
+        position: relative;
+        overflow:hidden;
+    }
+    header h1 {font-size:3em; margin-bottom:10px;}
+    header p {font-size:1.2em; opacity:0.9;}
+
+    /* 애니메이션 배너 효과 */
+    header::after {
+        content:"";
+        position:absolute;
+        top:0; left:0; width:100%; height:100%;
+        background:rgba(0,0,0,0.1);
+        animation:bannerGlow 5s infinite alternate;
+    }
+    @keyframes bannerGlow {0%{opacity:0.1}100%{opacity:0.2}}
+
+    /* 컨테이너 */
+    .container {max-width:1000px; margin:40px auto; padding:0 20px;}
+
+    /* 섹션 */
+    .section {margin-bottom:60px; opacity:0; transform: translateY(30px); animation:fadeInUp 1s forwards; animation-delay:0.2s;}
+    .section:nth-child(2) {animation-delay:0.3s;}
+    .section:nth-child(3) {animation-delay:0.4s;}
+    .section:nth-child(4) {animation-delay:0.5s;}
+    .section:nth-child(5) {animation-delay:0.6s;}
+    .section:nth-child(6) {animation-delay:0.7s;}
+
+    @keyframes fadeInUp {
+        to {opacity:1; transform:translateY(0);}
+    }
+
+    h2 {color:#4a90e2; margin-bottom:15px; border-bottom:3px solid #4a90e2; display:inline-block; padding-bottom:5px;}
+
+    ul {list-style:none; padding-left:0;}
+    ul li {
+        background:#e9f0fb; margin-bottom:12px; padding:15px 20px;
+        border-radius:8px; transition:transform 0.3s, background 0.3s;
+    }
+    ul li:hover {transform:translateY(-2px); background:#d0e2fc;}
+
+    /* 스크린샷/GIF */
+    .screenshot {
+        width:100%; max-width:800px; border-radius:10px; margin:20px 0;
+        box-shadow:0 6px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+    }
+    .screenshot:hover {transform:scale(1.02);}
+
+    /* 버튼 */
+    .buttons {margin-top:20px;}
+    .buttons a {
+        display:inline-block; background:#4a90e2; color:#fff; font-weight:bold;
+        padding:12px 25px; border-radius:6px; margin-right:15px; transition:background 0.3s, transform 0.3s;
+    }
+    .buttons a:hover {background:#357abd; transform:translateY(-2px);}
+
+    /* footer */
+    footer {text-align:center; padding:25px; background:#ddd; margin-top:40px; border-radius:10px;}
+
+    /* 반응형 */
+    @media(max-width:768px){
+        header h1 {font-size:2.2em;}
+        header p {font-size:1em;}
+        .buttons a {display:block; margin-bottom:10px;}
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>AIinviewer</h1>
+    <p>사용자 친화적인 AI 면접 웹 서비스</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>🛠 사용 기술</h2>
+        <ul>
+            <li>Frontend: React, HTML, CSS, JavaScript</li>
+            <li>Backend: Java (API 연동)</li>
+            <li>Database: MySQL</li>
+            <li>협업 툴: Git, GitHub, Notion, Slack</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>✨ 주요 기능</h2>
+        <ul>
+            <li>회원가입/로그인 및 사용자 인증</li>
+            <li>면접 질문 선택 및 응답 녹음 기능</li>
+            <li>AI 기반 면접 피드백 제공</li>
+            <li>관리자 페이지: 질문 및 피드백 관리</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400?text=프로젝트+스크린샷/GIF" alt="프로젝트 스크린샷" class="screenshot">
+    </div>
+
+    <div class="section">
+        <h2>🎯 역할 및 기여</h2>
+        <ul>
+            <li>프론트엔드 개발 담당</li>
+            <li>React 기반 UI/UX 구현 및 동적 페이지 제작</li>
+            <li>REST API 연동 및 화면 구성 최적화</li>
+            <li>CSS 활용 반응형 웹 디자인</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📝 프로젝트 진행 과정</h2>
+        <ul>
+            <li>기획: 요구사항 분석 및 기능 설계</li>
+            <li>개발: React 컴포넌트 구현, API 연동, UI 디자인 적용</li>
+            <li>테스트: 기능별 오류 수정, 사용자 피드백 반영</li>
+            <li>배포: Netlify/Vercel을 통한 최종 서비스 배포</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>💡 배운 점</h2>
+        <ul>
+            <li>프론트엔드 개발 실무 역량 강화</li>
+            <li>문제 상황에서도 팀과 협업하며 해결책 도출</li>
+            <li>사용자 중심 UI/UX 설계 경험</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔗 링크</h2>
+        <div class="buttons">
+            <a href="#" target="_blank">웹페이지 바로가기</a>
+            <a href="#" target="_blank">GitHub 코드</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2025 AIinviewer 포트폴리오
+</footer>
+
+</body>
+</html>
